@@ -1,0 +1,191 @@
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+    site: "Braut & Festmoden"    
+
+
+    admin:
+      login: "Login"
+      signin: "Signin"
+      exit: "Exit"
+      users: "Users"
+
+    lightbox:
+      labelImage: "Photo"
+      labelOf: "of" 
+
+    menu:
+        main: "Home"
+        collections: "Collections"
+        clients: "Our<br/>brides"
+        contacts: "Contancts"
+        about: "About us"        
+
+    front_page:
+        texts: "Texts"
+        slides: "Slides"
+        notices:
+            updated: "Page updated"
+                        
+    slides:
+        slide: "Slide"
+        title: "Slides"        
+        delete: "Do you really want to delete the slide?"
+        add: "Add slide"
+        add_title: "Adding slide"
+        edit_title: "Changing slide"        
+        notices:
+            added: "Slide successfully added"
+            updated: "Slide updated"
+            deleted: "Slide destroyed"
+        
+    collections:
+        delete: "Do you really want to delete the collection?"
+        see: "Watch"
+        add: "Add collection"
+        edit_title: "Changing collection"
+        add_title: "Adding collection"
+        
+        # Where should we place this string?? (what about other locales?)        
+        client_collection:  "Clients' photos"
+        
+        notices:
+            created: "Collection successfully created"
+            updated: "Collection updated"
+            deleted: "Collection destroyed"
+        images:
+            add_photo: "Add photo"
+            delete: "Do you really want to delete the photo?"
+            comments: "Comments (%{comments})"
+    
+    images:
+        back_to_collection: "back to collection"
+        edit_title: "Changing photo" 
+        add_title: "Adding photo"
+        notices:
+            added: "Photo successfully created"
+            updated: "Photo updated"
+            deleted: "Photo destroyed"
+        
+    comments:
+        author: "Author"
+        guest: "Guest"
+        add_date: "Add date"
+        delete: "Do you really want to delete the comment?"
+        edit_title: "Changing comment"
+        notices:
+            added: "Comment successfully created"
+            updated: "Comment updated"
+            deleted: "Comment destroyed"
+
+    contacts:
+        edit_title: "Changing contacts"
+        notices:
+            updated: "Contact information updated"
+
+    about:
+        edit_title: "Changing information"
+        notices:
+            updated: "Information updated"
+       
+    users:
+        list_title: "Users"
+        new_title: "Adding user"
+        edit_title: "Changing user"
+        add: "Add user"
+        edit: "Edit"
+        delete: "Delete"
+        delete_confirmation: "Do you really want to delete the user?"
+        notices:
+          added: "User successfully added"
+          updated: "User updated"
+          destroyed: "User destroyed"
+          cant_destroy_yourself: "You can't delete your own user"
+
+    shared:
+        back: "Back"
+        next: "Next"
+        save: "Save"
+        add: "Add"
+        cancel: "Cancel"
+        
+    activerecord:
+        models:
+            collection: "Collection" 
+            front_page: "Main page"
+            image: "Photo"
+            slide: "Slide"
+            comment: "Comment"
+            contact: "Contact"
+            about: "About us"
+        attributes:
+            collection:          
+                name_ru: "Name (ru)"
+                name_en: "Name (en)"
+                name_de: "Name (de)"
+                icon_ext: ""
+                uploaded_icon: "Icon"
+            front_page:
+                header: "Title"
+                footer: "Slogan"
+            image:
+                name: "Name"
+                uploaded_file: "Photo"
+                file_ext: ""
+            slide:
+                uploaded_file: "Slide"
+                file_ext: ""
+            comment:
+                author: "Author"
+                text: "Comment text"
+            contact:
+                info: "Contact information"
+                lat: "Latitude"
+                long: "Longitude"
+            about:
+                info: "Information about us"
+            admin:
+                login: "Login"
+                password: "Password"
+                password_confirmation: "Retype the password"
+        errors:
+            models:
+                collection:
+                    attributes:
+                        uploaded_icon:
+                            blank: "not specified"
+                        icon_ext:
+                            inclusion: "Unsupported image format"
+                comment:
+                    attributes:
+                        text:
+                            blank: "can't be empty"
+                image:
+                    attributes:
+                        uploaded_file:
+                            blank: "not specified"
+                        file_ext:
+                            inclusion: "Unsupported image format"
+                slide:
+                    attributes:
+                        uploaded_file:
+                            blank: "not specified"
+                        file_ext:
+                            inclusion: "Unsupported image format"
+                contact:
+                    attributes:
+                        lat:
+                            blank: "not specified"
+                        long:
+                            blank: "not specified"
+                        locale:
+                            inclusion: "Unsupported longuage"
+                admin:
+                    attributes:
+                        login:
+                            blank: "can't be blank"
+                            taken: "with the same name is already used by other user"
+                        password:
+                            blank: "can't be blank"
+                            confirmation: "doesn't match confirmation"
+

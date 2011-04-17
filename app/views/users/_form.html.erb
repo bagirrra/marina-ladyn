@@ -1,0 +1,18 @@
+<div class="form">
+  <%= form_for user, :as => :user, :url => action, :html => { :id => "user_form"} do |f| -%>
+<%= render :partial => "shared/errors", :object => user.errors %>
+<div class="content">
+  <div class="line">
+    <%= f.label :login %><%= f.text_field :login %>
+  </div>
+  <div class="line">
+    <%= f.label :password %><%= f.password_field :password %>
+  </div>
+  <div class="line">
+    <%= f.label :password_confirmation %><%= f.password_field :password_confirmation %>
+  </div>
+</div>
+<%= render :partial => "shared/buttons", :locals => {:submit_text => submit_text, :form_id => "user_form"} %>
+<% end -%>
+</div>
+

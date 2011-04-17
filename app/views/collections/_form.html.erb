@@ -1,0 +1,20 @@
+<div class="form">
+<%= form_for collection, :html => {:multipart => true, :id => "collections_form"} do |f| %>
+<%= render :partial => 'shared/errors', :object => collection.errors %>
+<div class="content">
+	<div class="line">
+		<%= f.label :name_ru %><%= f.text_field :name_ru %>
+	</div>
+	<div class="line">
+		<%= f.label :name_en %><%= f.text_field :name_en %>
+	</div>
+	<div class="line">
+		<%= f.label :name_de %><%= f.text_field :name_de %>
+	</div>
+	<div class="line">
+		<%= f.label :uploaded_icon %><%= f.file_field :uploaded_icon %>
+	</div>
+</div>
+<%= render :partial => "shared/buttons", :locals => {:submit_text => submit_text, :form_id => "collections_form"} %>
+<% end -%>
+</div>

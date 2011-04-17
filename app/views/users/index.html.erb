@@ -1,0 +1,25 @@
+<% content_for  :title do  -%>
+  <%= t "users.list_title" %>
+<% end -%>
+
+<div id="users_container">
+  <div id="add_user">
+    <%= link_to t("users.add"), new_user_path %>
+  </div>
+  <table id="user_list" cellspacing="0" border="0">
+    <% @users.each do |u| -%>  
+      <tr>
+        <td class="login_col"><%= u.login %></td>
+        <td class="edit_col"><div class="edit"><%= link_to t("users.edit"), edit_user_path(u) %></div></td>
+        <td class="del_col">
+        <% if current_admin != u -%>
+          <div class="delete">
+            <%= link_to t("users.delete"), user_path(u), :method => :delete,
+              :confirm => t("users.delete_confirmation") %>
+          </div>
+        <% end -%>
+        </td>
+      </tr>
+    <% end -%>
+  </table>
+</div>

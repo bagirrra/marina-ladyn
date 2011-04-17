@@ -1,0 +1,12 @@
+<div class="image">
+  <% if admin_signed_in? -%>
+    <div class="delete"><%= link_to "", collection_image_path(collection, image), :method => :delete, 
+      :confirm => t("collections.images.delete") %></div>
+    <div class="edit"><%= link_to "", edit_collection_image_path(collection, image) %></div>
+  <% end -%>
+  <div class="name"><%= image.name %></div>
+	<%= link_to image_tag(get_thumb_image_path(collection, image), :size => '151x227'), "/images/" + get_image_path(collection, image), :rel => "lightbox[collection]" %>
+    <%# image_tag get_image_path(collection, image), :size => '151x227' %>
+    <div class="comments"><%= link_to t("collections.images.comments", :comments => image.comments.size),
+		collection_image_path(collection, image) %></div>
+</div>

@@ -1,0 +1,16 @@
+<% content_for :title do -%>
+	<%= t "contacts.edit_title" %>
+<% end -%>
+
+<div  class="form">
+<% form_for @contacts, :url => update_contacts_path, :html => { :id => "contacts_form", :method => :post } do |f| -%>
+  <%= render :partial => "shared/errors", :object => @contacts.errors %>
+  <div class="content">
+    <div class="line"><%= f.label :info %> <%= f.text_area :info %></div>  
+    <div class="line"><%= f.label :lat %> <%= f.text_field :lat %></div>
+    <div class="line"><%= f.label :long %> <%= f.text_field :long %></div>
+  </div>
+  <%= render :partial => "shared/buttons", :locals => {:submit_text => t("shared.save"), :form_id => "contacts_form" }%>
+<% end -%>
+</div>
+

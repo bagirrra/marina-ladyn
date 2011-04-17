@@ -1,0 +1,12 @@
+<div class="form">
+<% form_for slide, :html => { :id => "slides_form", :multipart => true} do |f| -%>
+<%= render :partial => "shared/errors", :object => slide.errors %>
+<div class="content">
+	<div class="line">
+		<%= f.label :uploaded_file %>
+		<%= f.file_field :uploaded_file %>
+	</div>
+</div>
+<%= render :partial => "shared/buttons", :locals => {:submit_text => submit_text, :form_id => "slides_form" }%>
+<% end -%>
+</div>

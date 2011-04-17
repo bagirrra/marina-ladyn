@@ -1,0 +1,16 @@
+
+<% content_for :title do -%>
+	<%= t "slides.title" %>
+<% end %>
+<div id="slides_container">
+	<div id="add_slide">
+		<%= link_to t("slides.add"), new_slide_path %>
+	</div>
+	<div class="clear_right"></div>
+	<div id="slides">
+		<%= render :partial => 'slide', :collection => @slides %>
+		<%# WARNING! A dirty hack -%>
+		<div class="float_right"></div>
+		<div class="clear_right"></div>
+	</div>	
+</div>

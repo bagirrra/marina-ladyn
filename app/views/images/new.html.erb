@@ -1,0 +1,6 @@
+<% content_for :title do -%>
+	<%= t "images.add_title" %>
+<% end -%>
+<%= render :partial => 'form', :locals => {:collection => @collection, :image => @image, :submit_text => t("shared.add") } %>
+
+

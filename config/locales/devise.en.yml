@@ -1,0 +1,14 @@
+en:
+  errors:
+    messages:
+      not_found: "not found"
+
+  devise:
+    failure:
+      unauthenticated: 'You need to sign in before continuing'
+      invalid: 'Invalid email or password'
+      invalid_token: 'Invalid authentication token'
+      timeout: 'Your session expired, please sign in again to continue'
+    sessions:
+      signed_in: 'Signed in successfully'
+      signed_out: ''

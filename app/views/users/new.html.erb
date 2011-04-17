@@ -1,0 +1,7 @@
+<% content_for  :title do  -%>
+  <%= t "users.new_title" %>
+<% end -%>
+
+<div id="user_container">
+  <%= render :partial => 'form', :locals => {:user => @user, :action => users_path, :submit_text => t("shared.add") } %>
+</div>

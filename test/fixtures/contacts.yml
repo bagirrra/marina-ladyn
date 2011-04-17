@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  info: MyText
+  lat: 1.5
+  lang: 1.5
+  locale: MyString
+
+two:
+  info: MyText
+  lat: 1.5
+  lang: 1.5
+  locale: MyString

@@ -1,0 +1,15 @@
+<% content_for :title do -%>
+	<%= link_to t("images.back_to_collection"), @collection %>
+<% end -%>
+<article class="image_preview_bg">
+	<div class="big_image">
+    <div class="name"><%= @image.name %></div>
+    <%= image_tag get_image_path(@collection, @image), :width => "500" %>
+	</div>
+	<section class="users_comments">
+		<%= render :partial => 'comments/comment', :collection => @image.comments, 
+			:locals => {:collection => @collection, :image => @image } %>		
+	</section>
+	<%= render :partial => 'comments/form', :locals => { :collection => @collection, 
+		:image => @image, :comment => @comment, :submit_text => t("shared.add") } %>	
+</article>

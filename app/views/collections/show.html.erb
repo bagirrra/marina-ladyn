@@ -1,0 +1,24 @@
+<% content_for :title do -%>
+	<%= @collection.name %>
+<% end %>
+<% if admin_signed_in? -%>
+<div id="add_photo_bg">
+	<div id="add_photo">
+		<%= link_to t("collections.images.add_photo"), new_collection_image_path(@collection) %>
+	</div>
+	<div class="clear_right"></div>
+</div>
+<% end -%>
+<article class="collection_preview_bg">    
+	<%= render :partial => 'image', :collection => @images, 
+		:locals => { :collection => @collection } %>	
+</article>
+<script type="text/javascript" charset="utf-8">	
+	$$('.comments').each(
+		function(el) {
+			el.observe('click', function() {
+				window.location = el.down('a').href;
+			});
+		});
+</script>
+<%= will_paginate @images, :previous_label => t("shared.back"), :next_label => t("shared.next") %>

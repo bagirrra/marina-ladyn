@@ -1,0 +1,12 @@
+<div class="comment">
+	<p> <%= t "comments.author" %> <span class="author"><%= comment.author %></span>
+		<span class="add_date"><%= t "comments.add_date" %> <span><%= comment.created_at.strftime('%d.%m.%Y') %></span></span></p>
+    <% if admin_signed_in? -%>
+      <div class="comments_admin">
+        <%= link_to image_tag('icons/pencil.png'), edit_collection_image_comment_path(collection, image, comment)  %>
+        <%= link_to image_tag('icons/cross.png'), collection_image_comment_path(collection, image, comment), :method => :delete, 
+          :confirm => t("comments.delete") %>		
+      </div>
+    <% end -%>
+    <p class="user_comment"><%= comment.text %></p>
+</div>

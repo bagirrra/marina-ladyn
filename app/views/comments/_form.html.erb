@@ -1,0 +1,40 @@
+<div class="add_comment">
+<%= form_for [collection, image, comment], :html => { :id => "comment_form"} do |f| -%>
+<%= render :partial => "shared/errors", :object => comment.errors %>
+<div class="form_author">
+	<%= f.label :author %> 
+	<%= f.text_field :author %>
+</div>
+<div class="form_text">
+	<%= f.label :text %>
+	<%= f.text_area :text %>
+</div>
+<% unless comment.new_record? %>
+<div class="cancel_button">
+	Отмена
+</div>
+<% end %>
+<div class="add_comment_button">
+	<%= submit_text %>
+</div>
+<div class="clear_right"></div>
+<% end -%>
+</div>
+<script type="text/javascript" charset="utf-8">
+	function OnSubmitForm() {
+		$('comment_form').submit();
+	}
+	
+	function OnCancelForm() {
+		window.location = "<%= url_for(:back) %>";
+	}
+
+	$$('.add_comment_button').each(
+		function(el) {
+			el.observe('click', OnSubmitForm);
+		});
+	$$('.cancel_button').each(
+		function (el) {
+			el.observe('click', OnCancelForm);
+		})
+</script>

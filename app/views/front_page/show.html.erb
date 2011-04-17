@@ -1,0 +1,30 @@
+<article class="central_part">
+    <hgroup>
+    <% if admin_signed_in? -%>
+		<div class="edit"><%= link_to t("front_page.slides"), slides_path %></div>
+		<div class="edit"><%= link_to t("front_page.texts"), front_page_edit_path %></div>
+    <% end -%>
+		<div class="clear_right"></div>	
+        <h1> Lady N Collection</h1> 
+        <h2>
+	 		<%= raw @front_page.header %>
+        </h2>
+    </hgroup>
+    <div id="slide-show" class="slides-container">		
+		<% if !@slides.blank? -%>				
+			<script type="text/javascript">
+				var urls = ["<%= raw @slides.collect { |x| slide_url(x) }.join('", "') -%>"];
+						
+				document.observe("dom:loaded", function() {
+					var slideShow = new SlideShow("slide-show", urls);
+					slideShow.run();		
+				});
+			</script>						
+		<% else %>
+		  
+		<% end %>		
+    </div>
+    <p><%= raw @front_page.footer %></p>
+</article>
+
+

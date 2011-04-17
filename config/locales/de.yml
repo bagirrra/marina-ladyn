@@ -1,0 +1,189 @@
+de:
+    site: "Braut & Festmoden"    
+
+
+    admin:
+      login: "Login"
+      signin: "Anmelden"
+      exit: "Ausfahrt"
+      users: "Benutzer"
+
+    lightbox:
+      labelImage: "Foto"
+      labelOf: "von" 
+
+    menu:
+        main: "Startseite"
+        collections: "Sammlungen"
+        clients: "Unsere<br/>Bräute"
+        contacts: "Kontakt"
+        about: "Wir über uns"        
+
+    front_page:
+        texts: "Texte"
+        slides: "Folien"
+        notices:
+            updated: "Foto wird aktualisiert"
+                        
+    slides:
+        slide: "Rutsche"
+        title: "Folien"        
+        delete: "Wollen Sie die Folie entfernen?"
+        add: "Schreibe einen Schieber"
+        add_title: "Hinzufügen Rutsche"
+        edit_title: "Wechselschieber"        
+        notices:
+            added: "Dia erfolgreich hinzugefügt"
+            updated: "Dia aktualisiert"
+            deleted: "Dia zerstört"
+        
+    collections:
+        delete: "Dou Sie Sammlung löschen?"
+        see: "Wachen"
+        add: "Hinzufügen Sammlung"
+        edit_title: "Ändern Sammlung"
+        add_title: "Hinzufügen Sammlung"
+        
+        # Where should we place this string?? (what about other locales?)        
+        client_collection:  "Unsere Bräute"
+        
+        notices:
+            created: "Sammlung erfolgreich erstellt"
+            updated: "Sammlung aktualisiert"
+            deleted: "Sammlung zerstört"
+        images:
+            add_photo: "Foto hinzufügen"
+            delete: "Wollen Sie auf ein Foto löschen?"
+            comments: "Kommentare (%{comments})"
+    
+    images:
+        back_to_collection: "zurück zur kollektion"
+        edit_title: "Ändern Foto" 
+        add_title: "Hinzufügen Foto"
+        notices:
+            added: "Foto erfolgreich erstellt"
+            updated: "Foto aktualisiert"
+            deleted: "Foto zerstört"
+        
+    comments:
+        author: "Autor"
+        guest: "Gast"
+        add_date: "Fügen Sie Datum"
+        delete: "Möchtest du einen Kommentar abgeben löschen?"
+        edit_title: "Ändern Kommentar"
+        notices:
+            added: "Kommentar erfolgreich erstellt"
+            updated: "Kommentar aktualisiert"
+            deleted: "Kommentar zerstört"
+
+    contacts:
+        edit_title: "Ändern Kontakte"
+        notices:
+            updated: "Kontaktinformationen aktualisiert"
+
+    about:
+        edit_title: "Ändern Informationen"
+        notices:
+            updated: "Informationen aktualisiert"
+       
+    users:
+        list_title: "Benutzer"
+        new_title: "Hinzufügen von Benutzerkonten"
+        edit_title: "Ändern von Benutzerdaten"
+        add: "Benutzer hinzufügen"
+        edit: "Bearbeiten"
+        delete: "Löschen"
+        delete_confirmation: "Wollen Sie Benutzer löschen?"
+        notices:
+          added: "Benutzer erfolgreich hinzugefügt"
+          updated: "Benutzer aktualisiert"
+          destroyed: "Benutzer zerstört"
+          cant_destroy_yourself: "Sie können nicht löschen Ihre eigenen benutzerdefinierten"
+
+    shared:
+        back: "Zurück"
+        next: "Neben"
+        save: "Sparen"
+        add: "Hinzufügen"
+        cancel: "Abbrechen"
+        
+    activerecord:
+        models:
+            collection: "Sammlung" 
+            front_page: "Startseite"
+            image: "Foto"
+            slide: "Rutsche"
+            comment: "Kommentar"
+            contact: "Kontakt"
+            about: "Wir über uns"
+        attributes:
+            collection:          
+                name_ru: "Name (ru)"
+                name_en: "Name (en)"
+                name_de: "Name (de)"
+                icon_ext: ""
+                uploaded_icon: "Icon"
+            front_page:
+                header: "Titel"
+                footer: "Slogan"
+            image:
+                name: "Name"
+                uploaded_file: "Foto"
+                file_ext: ""
+            slide:
+                uploaded_file: "Rutsche"
+                file_ext: ""
+            comment:
+                author: "Rutsche"
+                text: "Kommentartext"
+            contact:
+                info: "Kontaktinformationen"
+                lat: "Breite"
+                long: "Länge"
+            about:
+                info: "Informationen über uns"
+            admin:
+                login: "Login"
+                password: "Kennwort"
+                password_confirmation: "Geben Sie das Kennwort"
+        errors:
+            models:
+                collection:
+                    attributes:
+                        uploaded_icon:
+                            blank: "keine angabe"
+                        icon_ext:
+                            inclusion: "Unterstützte bildformate"
+                comment:
+                    attributes:
+                        text:
+                            blank: "darf nicht leer sein"
+                image:
+                    attributes:
+                        uploaded_file:
+                            blank: "keine angabe"
+                        file_ext:
+                            inclusion: "Unterstützte bildformate"
+                slide:
+                    attributes:
+                        uploaded_file:
+                            blank: "keine angabe"
+                        file_ext:
+                            inclusion: "Unterstützte bildformate"
+                contact:
+                    attributes:
+                        lat:
+                            blank: "keine angabe"
+                        long:
+                            blank: "keine angabe"
+                        locale:
+                            inclusion: "Unterstützten sprache"
+                admin:
+                    attributes:
+                        login:
+                            blank: "darf nicht leer sein"
+                            taken: "mit dem gleichen namen bereits von anderen benutzer verwendet"
+                        password:
+                            blank: "darf nicht leer sein"
+                            confirmation: "stimmt nicht mit bestätigung"
+

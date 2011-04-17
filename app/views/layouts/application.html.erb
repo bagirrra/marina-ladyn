@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Lady N</title>
+	<%= stylesheet_link_tag :all %>
+	<%= javascript_include_tag :all %>
+	<%= csrf_meta_tag %>
+  <script type="text/javascript">
+    LightboxOptions.labelImage = "<%= t "lightbox.labelImage" %>";
+    LightboxOptions.labelOf = "<%= t "lightbox.labelOf" %>";
+  </script>
+</head>
+<body>
+	<div class="bg">
+    <% if admin_signed_in? -%>
+      <ul class="admin_menu">
+        <li><%= link_to t("admin.exit"), destroy_admin_session_path %></li>
+        <li><%= link_to t("admin.users"), users_path %></li>
+      </ul>
+    <% end -%>
+        <div class="layout">
+            <div class="wrapper">
+            	<div class="bg_left">                    
+						    <%= render "shared/locales" %>
+                <div class="clear"></div>
+					      <p><%= t "site" %></p>
+                <div class="clear"></div>
+                <div class="logo"></div>
+                </div>
+                <div class="bg_right">
+                    <div>
+                        <nav class="main_nav">
+                            <ul>
+                            	<li class="first"></li>
+                                <li class="main"><%= link_to t("menu.main"), :root %></li>
+                                <li class="collections"><%= link_to t("menu.collections"), collections_path %></li>
+                                <li class="clients"><%= link_to raw(t("menu.clients")), our_clients_collections_path %></li>
+                                <li class="contacts"><%= link_to t("menu.contacts"), :contacts %></li>
+                                <li class="about_us"><%= link_to t("menu.about"), :about %></li>
+                                <li class="last"></li>
+                            </ul>
+                        </nav>
+
+            <% flash.each do |key, msg| -%>
+              <% unless msg.empty? -%>
+              <p class="notice"> <%= msg %></p>
+              <% end -%>  
+            <% end -%>
+						<% if content_for? :title -%>
+							<p class="collection_name"><%= yield :title %></p>													
+						<% end -%>
+						<%= yield %>
+             		</div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

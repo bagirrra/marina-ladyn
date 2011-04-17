@@ -1,0 +1,27 @@
+<% content_for :title do -%>
+	<%= t "menu.collections" %>
+<% end %>
+<% if admin_signed_in? -%>
+<div id="add_collection_bg">
+	<div id="add_collection">
+		<%= link_to t("collections.add"), new_collection_path %>
+	</div>		
+	<div class="clear_right"></div>
+</div>
+<% end -%>
+
+<article class="collections_bg">
+	<% @collections.each do |c| -%>
+		<%= render :partial => 'collection', :object => c %>
+	<% end -%>	
+	<div class="clear"></div> 
+</article>
+<script type="text/javascript" charset="utf-8">	
+	$$('.watch').each(
+		function(el) {
+			el.observe('click', function() {
+				window.location = el.down('a').href;
+			});
+		});
+</script>
+<%= will_paginate @collections, :previous_label => t("shared.back"), :next_label => t("shared.next") %>

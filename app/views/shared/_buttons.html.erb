@@ -1,0 +1,31 @@
+<div class="buttons_line">
+	<div class="cancel_button">
+		<%= t "shared.cancel" %>
+	</div>
+	<div class="submit_button">
+		<%= submit_text %>
+	</div>
+	<div class="clear_right"></div>	
+</div>
+<script type="text/javascript">
+	function OnSubmitForm_<%= form_id %>() {
+		$('<%= form_id %>').submit();
+	}
+	
+	function OnCancelForm() {
+    <% if defined?(back_url).nil? -%>
+		window.location = "<%= url_for(:back) %>";
+    <% else -%>
+		window.location = "<%= url_for(back_url) %>";
+    <% end -%>
+	}
+
+	$$('.submit_button').each(
+		function(el) {
+			el.observe('click', OnSubmitForm_<%= form_id %>);
+		});
+	$$('.cancel_button').each(
+		function (el) {
+			el.observe('click', OnCancelForm);
+		});
+</script>

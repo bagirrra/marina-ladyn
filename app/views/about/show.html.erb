@@ -1,0 +1,9 @@
+<% content_for :title do -%>
+	<%= t "menu.about" %>
+<% end -%>
+<div class="about">
+  <% if admin_signed_in? -%>
+  <div class="edit"><%= link_to t("menu.about"), edit_about_path %></div>
+  <% end -%>
+  <div class="info"><%= raw @about.info %></div>
+</div>

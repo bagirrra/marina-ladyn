@@ -1,0 +1,4 @@
+<% content_for :title do -%>
+	<%= t "slides.edit_title" %>
+<% end -%>
+<%= render :partial => 'form', :locals => { :slide => @slide, :submit_text => t("shared.save") } %>

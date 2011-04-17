@@ -1,0 +1,12 @@
+<% content_for :title do -%>
+	<%= t "about.edit_title" %>
+<% end -%>
+<div class="form">
+<% form_for @about,  :url => update_about_path, :html => { :id => "about_form", :method => :post } do |f| -%> 
+  <%= render :partial => "shared/errors", :object => @about.errors %>
+  <div class="content">
+    <div class="line"><%= f.label :info %> <%= f.text_area :info %></div>  
+  </div>
+  <%= render :partial => "shared/buttons", :locals => {:submit_text => t("shared.save"), :form_id => "about_form" }%>
+<% end -%>
+</div>

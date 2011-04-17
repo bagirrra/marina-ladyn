@@ -1,0 +1,40 @@
+<% content_for :title do -%>
+	<%= t "front_page.texts" %>
+<% end -%>
+<div class="texts_form">
+<% form_for @front_page, :url => front_page_update_path, :html => { :id => 'front_page_form', :method => :post } do |f| -%>	  
+	<div class="form_header">
+		<%= f.label :header %><%= f.text_area :header %>
+	</div>
+	<div class="form_footer">
+		<%= f.label :footer %><%= f.text_area :footer %>  
+	</div>	
+	
+	<div class="cancel_button">
+		<%= t "shared.cancel" %>
+	</div>
+	<div class="add_comment_button">
+		<%= t "shared.save" %>
+	</div>
+	<div class="clear_right"></div>
+<% end -%>
+<script type="text/javascript" char	set="utf-8">
+	function OnSubmitForm() {
+		$('front_page_form').submit();
+	}
+	
+	function OnCancelForm() {
+		window.location = "<%= url_for(:root) %>";
+	}
+
+	$$('.add_comment_button').each(
+		function(el) {
+			el.observe('click', OnSubmitForm);
+		});
+	
+	$$('.cancel_button').each(
+		function (el) {
+			el.observe('click', OnCancelForm);
+		})
+</script>
+</div>	

@@ -1,0 +1,15 @@
+<ul class="locales">
+	<%	
+	 	url = request.fullpath
+	 	url.slice!(1..3) # remove current locale from the url	 	
+	-%>
+  <% if I18n.locale != :ru -%>
+	<li><%= link_to "RU",  "/ru" + url %></li>
+  <% end -%>
+  <% if I18n.locale != :en -%>
+	<li><%= link_to "EN", "/en" + url %></li>
+  <% end -%>
+  <% if I18n.locale != :de -%>
+  <li><%= link_to "DE", "/de" + url %></li>
+  <% end -%>
+</ul>

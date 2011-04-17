@@ -1,0 +1,189 @@
+ru:
+    site: "Braut & Festmoden"   
+
+
+    admin:
+      login: "Вход"
+      signin: "Войти"
+      exit: "Выход"
+      users: "Пользователи"
+
+    lightbox:
+      labelImage: "Фотография"
+      labelOf: "из" 
+
+    menu:
+        main: "Главная"
+        collections: "Коллекции"
+        clients: "Наши<br/>невесты"
+        contacts: "Контакты"
+        about: "О нас"        
+
+    front_page:
+        texts: "Тексты"
+        slides: "Слайды"
+        notices:
+            updated: "Cтраница обновлена"
+                        
+    slides:
+        slide: "Слайд"
+        title: "Слайды"        
+        delete: "Вы действительно хотите удалить слайд?"
+        add: "Добавить слайд"
+        add_title: "Добавление слайда"
+        edit_title: "Редактирвание слайда"
+        notices:
+            added: "Слайд успешно добавлен"
+            updated: "Слайд изменен"
+            deleted: "Слайд удален"
+        
+    collections:
+        delete: "Вы действительно хотите удалить коллекцию?"
+        see: "Смотреть"
+        add: "Добавить коллекцию"
+        edit_title: "Редактирование коллекции"
+        add_title: "Добавление коллекции"
+        
+        # Where should we place this string?? (what about other locales?)        
+        client_collection:  "Фотографии клиентов"
+        
+        notices:
+            created: "Коллекция успешно создана"
+            updated: "Коллекция обновлена"
+            deleted: "Коллекция удалена"
+        images:
+            add_photo: "Добавить фотографию"
+            delete: "Вы действительно хотите удалить фотографию?"
+            comments: "Комментарии (%{comments})"
+    
+    images:
+        back_to_collection: "вернуться к коллекции"
+        edit_title: "Редактирование фотографии" 
+        add_title: "Добавление фотографии"
+        notices:
+            added: "Фотография успешно добавлена"
+            updated: "Фотография обновлена"
+            deleted: "Фотография удалена"
+        
+    comments:
+        author: "Автор"
+        guest: "Гость"
+        add_date: "Дата добавления"
+        delete: "Вы действительно хотите удалить комментарий?"
+        edit_title: "Редактирование комментария"
+        notices:
+            added: "Комментарий успешно добавлен"
+            updated: "Комментарий обновлен"
+            deleted: "Комментарий удален"
+
+    contacts:
+        edit_title: "Редактирование контактов"
+        notices:
+            updated: "Контактная информация обновлена"
+
+    about:
+        edit_title: "Редактирование информации"
+        notices:
+            updated: "Информация обновлена"
+
+    users:
+        list_title: "Пользователи"
+        new_title: "Добавление пользователя"
+        edit_title: "Редактирование пользователя"
+        add: "Добавить пользователя"
+        edit: "Изменить"
+        delete: "Удалить"
+        delete_confirmation: "Вы действительно хотите удалить выбранного пользователя?"
+        notices:
+          added: "Пользователь успешно добавлен"
+          updated: "Пользователь обновлен"
+          destroyed: "Пользователь удален"
+          cant_destroy_yourself: "Вы не можите удалить своего пользователя"
+        
+    shared:
+        back: "Назад"
+        next: "Вперед"
+        save: "Сохранить"
+        add: "Добавить"
+        cancel: "Отмена"
+        
+    activerecord:
+        models:
+            collection: "Коллекция" 
+            front_page: "Главная страница"
+            image: "Фотография"
+            slide: "Слайд"
+            comment: "Комментарий"
+            contact: "Контакт"
+            about: "О нас"
+            admin: "Администратор"
+        attributes:
+            collection:          
+                name_ru: "Название (ru)"
+                name_en: "Название (en)"
+                name_de: "Название (de)"
+                icon_ext: ""
+                uploaded_icon: "Иконка"
+            front_page:
+                header: "Заголовок"
+                footer: "Слоган"
+            image:
+                name: "Название"
+                uploaded_file: "Фотография"
+                file_ext: ""
+            slide:
+                uploaded_file: "Слайд"
+                file_ext: ""
+            comment:
+                author: "Автор"
+                text: "Текст комментария"
+            contact:
+                info: "Контактная информация"
+                lat: "Координаты широты"
+                long: "Координаты долготы"
+            about:
+                info: "Информация о нас"
+            admin:
+                login: "Логин"
+                password: "Пароль"
+                password_confirmation: "Повторите пароль"
+        errors:
+            models:
+                collection:
+                    attributes:
+                        uploaded_icon:
+                            blank: "не выбрана"
+                        icon_ext:
+                            inclusion: "Неподдерживаемый формат изображения"
+                comment:
+                    attributes:
+                        text:
+                            blank: "не может быть пустым"
+                image:
+                    attributes:
+                        uploaded_file:
+                            blank: "не выбрана"
+                        file_ext:
+                            inclusion: "Неподдерживаемый формат изображения"
+                slide:
+                    attributes:
+                        uploaded_file:
+                            blank: "не выбран"
+                        file_ext:
+                            inclusion: "Неподдерживаемый формат изображения"
+                contact:
+                    attributes:
+                        lat:
+                            blank: "не указана"
+                        long:
+                            blank: "не указана"
+                        locale:
+                            inclusion: "Неподдерживаемый язык"
+                admin:
+                    attributes:
+                        login:
+                            blank: "обзателен для заполнения"
+                            taken: "c таким именем уже используется другим пользователем"
+                        password:
+                            blank: "не может быть пустым"
+                            confirmation: "не совпадает с повторно введенным паролем"

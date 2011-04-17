@@ -1,0 +1,7 @@
+<div class="slide">
+	<div class="delete"><%= link_to "", slide_path(slide.id), :method => :delete, 
+		:confirm => t("slides.delete") %></div>
+	<div class="edit"><%= link_to "", edit_slide_path(slide.id) %></div>
+	
+	<%= image_tag get_slide_path(slide), :size => "230x125" %>
+</div>

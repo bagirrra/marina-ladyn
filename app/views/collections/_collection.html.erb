@@ -1,0 +1,10 @@
+<div class="collection">	
+  <% if admin_signed_in? -%>
+    <div class="delete"><%= link_to "",  collection_path(collection), :method => :delete, 
+      :confirm => t("collections.delete") %></div>			
+    <div class="edit"><%= link_to "",  edit_collection_path(collection) %></div>
+  <% end -%>
+  <p><%= link_to collection.name, collection_path(collection) %></p>
+  <%= link_to image_tag("collections/#{collection.id}/icon#{collection.icon_ext}", :size => '215x117'), collection_path(collection), :class=> "icon" %> 
+  <div class="watch"><%= link_to t("collections.see"), collection_path(collection) %></div>
+</div>

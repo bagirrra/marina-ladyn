@@ -1,0 +1,15 @@
+
+<% content_for :title do -%>
+	<%= t "admin.login" %>
+<% end -%>
+
+<div  class="form">
+  <% form_for resource, :as => resource_name, :url => session_path(resource_name), :html => { :id => "login_form" } do |f| -%>
+  <%= render :partial => "shared/errors", :object => resource.errors %>
+  <div class="content">
+    <div class="line"><%= f.label :login %> <%= f.text_field :login %></div>
+    <div class="line"><%= f.label :password %> <%= f.password_field :password %></div>
+  </div>
+  <%= render :partial => "shared/buttons", :locals => {:submit_text => t("admin.signin"), :form_id => "login_form", :back_url => :root }%>
+<% end -%>
+</div>

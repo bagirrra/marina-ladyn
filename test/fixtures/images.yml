@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: 
+  file_ext: 
+  order: 
+  collection: 
+
+two:
+  name: 
+  file_ext: 
+  order: 
+  collection: 

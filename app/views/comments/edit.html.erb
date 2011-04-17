@@ -1,0 +1,5 @@
+<% content_for :title do -%>
+	<%= t "comments.edit_title" %>
+<% end -%>
+<%= render :partial => 'form', :locals => {:collection => @collection, :image => @image, :comment => @comment, 
+	:submit_text => t("shared.save") } %>	

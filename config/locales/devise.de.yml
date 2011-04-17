@@ -1,0 +1,15 @@
+de:
+  errors:
+    messages:
+      not_found: "nicht gefunden"
+
+  devise:
+    failure:
+      unauthenticated: 'Sie müssen sich anmelden, bevor Sie fortfahren'
+      invalid: 'Ungültige Login oder Passwort'
+      invalid_token: 'Ungültige Authentifizierungs-Token'
+      timeout: 'Ihre Sitzung ist abgelaufen, bitte melden Sie sich erneut, um fortzufahren'
+    sessions:
+      signed_in: 'Unterzeichnet in erfolgreich'
+      signed_out: ''
+      
